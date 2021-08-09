@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [08/Aug/2021:16:41:41 -0300] "GET / HTTP/1.1" 404 - http-bio-9090-exec-1 0
+0:0:0:0:0:0:0:1 - - [08/Aug/2021:16:42:54 -0300] "GET /pedidos/index.xhtml HTTP/1.1" 404 - http-bio-9090-exec-4 0
+0:0:0:0:0:0:0:1 - - [08/Aug/2021:16:43:06 -0300] "GET /pedidos/index.xhtml HTTP/1.1" 404 - http-bio-9090-exec-6 0
+0:0:0:0:0:0:0:1 - - [08/Aug/2021:16:43:11 -0300] "GET /Pedidos/index.xhtml HTTP/1.1" 500 4024 http-bio-9090-exec-7 120
+0:0:0:0:0:0:0:1 - - [08/Aug/2021:16:43:11 -0300] "GET /favicon.ico HTTP/1.1" 404 - http-bio-9090-exec-5 0
+0:0:0:0:0:0:0:1 - - [08/Aug/2021:16:47:11 -0300] "GET /pedidos/index.xhtml HTTP/1.1" 200 257 http-bio-9090-exec-1 158
