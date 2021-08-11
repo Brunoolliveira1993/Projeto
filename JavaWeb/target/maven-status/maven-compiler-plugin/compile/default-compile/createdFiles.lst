@@ -1,0 +1,6 @@
+br\com\bruno\java\javaweb\web\bean\ItemPedidoBean.class
+br\com\bruno\java\javaweb\web\bean\PedidoBean.class
+br\com\bruno\java\javaweb\web\mapper\ItemPedidoMapper.class
+br\com\bruno\java\javaweb\web\mapper\PedidoMapper.class
+br\com\bruno\java\javaweb\web\model\ItemPedido.class
+br\com\bruno\java\javaweb\web\model\Pedido.class

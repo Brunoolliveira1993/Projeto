@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <title>JavaWeb</title>
+</h:head>
+    <h:form>
+        <h:panelGrid columns="6">
+            <h:outputLabel value="Pedido:"/>
+            <h:inputText id="Pedido"
+                         value="#{pedidoBean.pedido.numeroPedido}"
+                         required="true">
+            </h:inputText>
+            <h:message for="Pedido"/>
+
+
+            <h:outputLabel value="Data Abertura :"/>
+            <h:inputText id="Data" value="#{pedidoBean.pedido.dataAbertura}" >
+                <f:convertDateTime pattern="dd/mm/yyyy" timeZone="#{initParam.timezone}"/>
+            </h:inputText>
+            <h:message for="Data"/>
+
+
+            <h:outputLabel value="Cliente:"/>
+            <h:inputText id="RazaoSocial"
+                             value="#{pedidoBean.pedido.razaoSocial}"
+                             required="true">
+                <f:validateLength minimum="3" maximum="255"/>
+            </h:inputText>
+            <h:message for="RazaoSocial"/>
+
+            <h:outputLabel value="Cpf/Cnpj:"/>
+            <h:inputText id="CPFCNPJ"
+                         value="#{pedidoBean.pedido.cpfcpnj}"
+                         required="true">
+                <f:validateLength minimum="3" maximum="255"/>
+            </h:inputText>
+            <h:message for="CPFCNPJ"/>
+
+            <h:outputLabel value="Telefone:"/>
+            <h:inputText id="Telefone"
+                         value="#{pedidoBean.pedido.telefone}"
+                         required="true">
+                <f:validateLength minimum="3" maximum="255"/>
+            </h:inputText>
+            <h:message for="Telefone"/>
+
+            <h:outputLabel value="Email:"/>
+            <h:inputText id="Email"
+                         value="#{pedidoBean.pedido.email}"
+                         required="true">
+                <f:validateLength minimum="3" maximum="255"/>
+            </h:inputText>
+            <h:message for="Email"/>
+            <h:form>
+                <h:panelGrid columns="1">
+                    <h:commandButton value="Adicionar Item" action="#{ItemPedidoBean.adicionar}"/>
+                </h:panelGrid>
+                    <h:dataTable value="#{ItemPedidoBean.Itens}" var="Item">
+                            <h:column>
+                                <f:facet name="header">Sequencia</f:facet>
+                                #{Item.id}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Nome produto</f:facet>
+                                #{Item.Produto}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Quantidade</f:facet>
+                                #{Item.Quantidade}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Valor</f:facet>
+                                #{Item.Valor}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Valor Total</f:facet>
+                                #{Item.Valor_total}
+                            </h:column>
+
+                    </h:dataTable>
+            </h:form>
+
+        </h:panelGrid>
+
+        <h:commandButton value="Enviar" action="#{pedidoBean.adicionar}"/>
+    </h:form>
+</html>
